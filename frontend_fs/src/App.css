@@ -1,0 +1,112 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.home-page {
+  display: flex;
+  height: 100vh; /* Use full view height */
+}
+
+.sidebar {
+  width: 20%; /* Sidebar width */
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.left-sidebar {
+  border-right: 1px solid #ccc; /* Adds a dividing line between sidebar and main content */
+}
+
+.right-sidebar {
+  border-left: 1px solid #ccc; /* Adds a dividing line between sidebar and main content */
+}
+
+.main-content {
+  flex-grow: 1; /* Allows the main content to take up the remaining space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.weather-widget, .news-feed, .chat-window {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: white; /* Optional: adds a background color */
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #FFA500; /* Orange */
+  display: flex; /* Rendre la liste flexible */
+  align-items: center; /* Centrer les éléments verticalement */
+}
+
+nav li {
+  float: none;
+}
+nav li.signup-button {
+  margin-left: auto; /* Pousse le bouton à droite */
+  background-color: green; /* Couleur de fond */
+  border-radius: 5px; /* Bords arrondis */
+}
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: #32CD32; /* Vert lime, changer selon vos préférences */
+}
+/* Ajoutez ceci à votre fichier CSS existant */
+nav li.signup-button a {
+  background-color: green; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  border-radius: 5px; /* Bords arrondis */
+  padding: 10px 20px; /* Padding plus grand */
+}
+
+nav li.signup-button a:hover {
+  background-color: darkgreen; /* Couleur au survol */
+}

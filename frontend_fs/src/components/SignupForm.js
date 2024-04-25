@@ -30,14 +30,14 @@ function SignupForm() {
     >
       {({ isSubmitting }) => (
         <Form>
-          <Field type="text" name="username" placeholder="Nom d'utilisateur" />
-          <ErrorMessage name="username" component="div" />
+          <Field type="text" name="username" placeholder="Nom d'utilisateur" aria-label="Nom d'utilisateur" />
+          <ErrorMessage name="username" component="div" className="error-message" />
           
-          <Field type="email" name="email" placeholder="Email" />
-          <ErrorMessage name="email" component="div" />
+          <Field type="email" name="email" placeholder="Email" aria-label="Email" />
+          <ErrorMessage name="email" component="div" className="error-message" />
 
-          <Field type="password" name="password" placeholder="Mot de passe" />
-          <ErrorMessage name="password" component="div" />
+          <Field type="password" name="password" placeholder="Mot de passe" aria-label="Mot de passe" />
+          <ErrorMessage name="password" component="div" className="error-message" />
           
           <button type="submit" disabled={isSubmitting}>
             S'inscrire

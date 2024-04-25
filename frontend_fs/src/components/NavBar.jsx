@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SearchBar from './SearchBar'; 
 
-const NavBar = () => {
+const NavBar = ({ onSearch }) => {
   return (
     <nav>
       <ul>
@@ -14,8 +15,9 @@ const NavBar = () => {
         <li className="signup-button">
           <Link to="/signup">S'inscrire / Se Connecter</Link>
         </li>
-
-        {/* Vous pouvez ajouter d'autres liens ici selon vos besoins */}
+        <li>
+        <SearchBar onSearch={onSearch} />  {/* Ajout de la barre de recherche */}
+        </li>
       </ul>
     </nav>
   );

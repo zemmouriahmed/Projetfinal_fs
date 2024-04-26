@@ -1,0 +1,46 @@
+.home-page {
+    position: relative;
+    height: 100vh;  /* Assure-toi que le conteneur principal prend toute la hauteur de la fenêtre */
+  }
+  
+  .open-chat-btn {
+    position: fixed; /* Fixe le bouton par rapport à la fenêtre du navigateur */
+    left: 0;
+    bottom: 0;
+    padding: 10px 20px;
+    background-color: #007BFF; /* Couleur de fond bleue */
+    color: white; /* Texte blanc */
+    border: none;
+    border-radius: 0 10px 0 0; /* Arrondir le coin supérieur droit */
+    cursor: pointer;
+  }
+  
+  .open-chat-btn:hover {
+    background-color: #0056b3; /* Foncer le bouton quand on survole */
+  }
+  .open-comment-btn {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 10px 20px;
+    background-color: #28a745; /* Vert pour différencier des autres boutons */
+    color: white;
+    border: none;
+    border-radius: 10px 0 0 0; /* Arrondir le coin supérieur gauche */
+    cursor: pointer;
+  }
+  
+  .open-comment-btn:hover {
+    background-color: #218838; /* Vert foncé au survol */
+  }
+  
+  .comment-popup {
+    position: fixed;
+    bottom: 10px;
+    right: 50px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  

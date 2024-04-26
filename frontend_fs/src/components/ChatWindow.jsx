@@ -3,17 +3,17 @@ import io from 'socket.io-client';
 
 const socket = io('http://localhost:3000');
 
-const ChatWindow = () => {
+const ChatWindow = ({ isVisible, closeChat }) => {
     const [message, setMessage] = useState('');
     const [chat, setChat] = useState([]);
     const [recipient, setRecipient] = useState('');
-    const [users, setUsers] = useState([]);  // Liste des utilisateurs connectés
+    const [users, setUsers] = useState([]);
 
     useEffect(() => {
         socket.on('chat message', (msg) => {
             setChat(prevChat => [...prevChat, msg]);
         });
-        
+
         socket.on('update users', (users) => {
             setUsers(users);
         });
@@ -32,8 +32,11 @@ const ChatWindow = () => {
         }
     };
 
+    if (!isVisible) return null;
+
     return (
         <div className="chat-window">
+            <button onClick={closeChat}>Close</button>
             <h2>Chat</h2>
             <select value={recipient} onChange={(e) => setRecipient(e.target.value)} required>
                 <option value="">Select recipient...</option>
